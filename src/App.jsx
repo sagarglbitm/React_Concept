@@ -13,6 +13,39 @@ import Footer_context from './Component/Footer_context.jsx'
 import useLocalStorageCustom from './Component/useLocalStorageCustom.jsx'
 import PostApi from './Component/PostApi.jsx'
 import GetApi from './Component/GetApi.jsx'
+import Suspense from './Component/Suspensed.jsx'
+import Suspensed from './Component/Suspensed.jsx'
+import FormApi from './Component/FormApi.jsx'
+import User from './Component/Error_Boundary/User.jsx'
+import ErrorBoundary from '../../practice_react/src/Component/Error_Boundary/ErrorBoundary.jsx'
+import MaxCount from './Component/Challenges/MaxCount.jsx'
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import ByLink from './Component/Routing/ByLink.jsx'
+import HomeLink from './Component/Routing/HomeLink.jsx'
+import ProfileLink from './Component/Routing/ProfileLink.jsx'
+
+
+import ByNav from './Component/Routing/ByNav.jsx'
+import AboutNavigation from './Component/Routing/AboutNav.jsx'
+import SettingNav from './Component/Routing/SettingNav.jsx'
+import Prepopulate from './Component/Prepopulate.jsx'
+import HOC from './Component/HOC.jsx'
+import Todo from './Component/Challenges/Todo.jsx'
+import Timer from './Component/Challenges/Timer.jsx'
+import ProgressBar from './Component/Challenges/ProgressBar.jsx'
+import Debouncing from './Component/Debouncing.jsx'
+import Searching from './Component/Searching.jsx'
+import Throttling from './Component/Throttling.jsx'
+import React_Fiber from './Component/React_Fiber.jsx'
+import Callback_Method from './Component/child_to_parent/Callback_Method.jsx'
+import ContextAPI_Method from './Component/child_to_parent/ContextAPI_Method.jsx'
+import Pagination from './Component/Pagination/ClientSidePagination.jsx'
+import ClientSidePagination from './Component/Pagination/ClientSidePagination.jsx'
+import ServerSidePagination from './Component/Pagination/ServerSidePagination.jsx'
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +66,7 @@ function App() {
     {/* <Ref /> */}
 
     {/* useMemo */}
-    <Memo />
+    {/* <Memo /> */}
 
     {/* use callback */}
     {/* <Callback /> */}
@@ -54,7 +87,67 @@ function App() {
   {/* getapi by using fetch and axios */}
   {/* <GetApi/> */}
 
+  {/* <Suspensed/> */}
+
+    {/* <FormApi /> */}
+
+
+    {/* error boundary */}
+    {/* <ErrorBoundary>
+    <User name='sagar'/>
+    </ErrorBoundary>
+    <ErrorBoundary>
+    <User name='error'/>
+    </ErrorBoundary> */}
+
+
+    {/* Routing */}
+
+     {/* <ByLink/>
+    <Routes>
+      <Route path='/homeLink' element={<HomeLink/>}/>
+      <Route path='/profileLink' element={<ProfileLink/>}/>
+    </Routes>
+<br></br> */}
+
+    {/* <ByNav/>
+    <Routes>
+      <Route path='/aboutNav' element={<AboutNavigation/>}/>
+      <Route path='/settingNav' element={<SettingNav/>}/>
+
+    </Routes> */}
+
+    {/* prepouplatedata */}
+    {/* <Prepopulate/> */}
+  
+
+
+    {/* challenges */}
+    {/* <MaxCount /> */}
+    {/* <Todo/> */}
+    {/* <Timer/> */}
+    {/* <ProgressBar/> */}
+   
+    {/* High order componeent */}
+   {/* <HOC/> */}
     
+    {/* <Searching/> */}
+
+    {/* <Debouncing/> */}
+
+    {/* <Throttling/> */}
+    {/* <React_Fiber/> */}
+
+
+    {/* ways to pass data form child to parent */}
+    {/* <Callback_Method/> */}
+    {/* <ContextAPI_Method/> */}
+
+
+    {/* <ClientSidePagination/> */}
+    <ServerSidePagination/>
+
+   
       
     </>
   )

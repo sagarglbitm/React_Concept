@@ -3,15 +3,13 @@ import React, { useState,useMemo } from 'react'
 function Memo() {
   const [number,setNumber]=useState(0)
   const [counter,setCounter]=useState(0)
-
-
   
   function cubeNum(num){
     console.log("calculation done")
     return(Math.pow(num,3))
   }
   // const result =cubeNum(number)
-  const result =useMemo(()=>{return cubeNum(number)},[number])
+  const result =useMemo(()=>{cubeNum(number)},[number])
   return (
 
 
