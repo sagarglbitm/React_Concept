@@ -1,3 +1,4 @@
+
 import React,{useState} from 'react'
 
 const Callback_Method = () => {
@@ -22,6 +23,8 @@ const Callback_Method = () => {
 
 // eslint-disable-next-line react/prop-types
 const Child = ({ sendDataToParent }) => {
+
+  
     const [inputValue, setInputValue] = useState('');
   
     const handleSubmit = (e) => {

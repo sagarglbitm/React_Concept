@@ -6,6 +6,7 @@ const withCounter = (WrappedComponent) => {
   return (props) => {
     const [count, setCount] = useState(0);
 
+    console.log("warp")
     const incrementCount = () => {
       setCount((prevCount) => prevCount + 1);
     };

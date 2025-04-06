@@ -9,6 +9,7 @@ const Debouncing = () => {
     // Set a timeout to update the debounced value
     const handler = setTimeout(() => {
       setDebouncedValue(inputValue);
+      console.log(debouncedValue)
     }, 1000); // Delay of 500ms
 
     // Cleanup function to clear timeout if inputValue changes before the delay

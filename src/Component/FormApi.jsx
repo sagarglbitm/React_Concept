@@ -87,9 +87,9 @@ function FormApi() {
                 <input type='radio' name='gender' value='male'  onChange={handleChangeInput}/> <label>MALE</label>
                 <input type='radio' name='gender' value='female' onChange={handleChangeInput}/> <label>Female</label>
                 <select name='vehicle' value={formData.vehicle} onChange={handleChangeInput} >
-                    <option name='car' >car</option>
-                    <option name='scooty' >scooty</option>
-                    <option name='bike' >bike</option>
+                    <option value='car' >car</option>
+                    <option value='scooty' >scooty</option>
+                    <option value='bike' >bike</option>
                 </select>
 
                 <input type='checkbox' name='condition'  value='agree'  onChange={handleCheckBox}  /><label>AGREE</label>

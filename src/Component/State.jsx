@@ -21,9 +21,10 @@ function State() {
 
   }
 
-  const changeDetails=()=>{
+  const changeDetails=(e)=>{
+    e.preventDefault()
 
-    // if we write this then it remove initalall thing and update only color
+    // if we write this then it remove inital all thing and update only color
 
     // setCar({color:"pink"})
 

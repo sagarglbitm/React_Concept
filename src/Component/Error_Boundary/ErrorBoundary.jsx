@@ -1,3 +1,5 @@
+
+
 import React, { Component } from 'react'
 
  class ErrorBoundary extends Component {
@@ -13,7 +15,7 @@ import React, { Component } from 'react'
 
   render() {
     if(this.state.hasError){
-        return(<div>something wrong</div>)
+        return(<div>something went wrong</div>)
     }
     return (
       this.props.children

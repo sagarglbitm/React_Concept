@@ -10,14 +10,14 @@ import Callback from './Component/Callback.jsx'
 import Context from './Component/Context.jsx'
 import Profile_context from './Component/Profile_context.jsx'
 import Footer_context from './Component/Footer_context.jsx'
-import useLocalStorageCustom from './Component/useLocalStorageCustom.jsx'
+import useFetch from './Component/useFetch.jsx'
 import PostApi from './Component/PostApi.jsx'
 import GetApi from './Component/GetApi.jsx'
 import Suspense from './Component/Suspensed.jsx'
 import Suspensed from './Component/Suspensed.jsx'
 import FormApi from './Component/FormApi.jsx'
 import User from './Component/Error_Boundary/User.jsx'
-import ErrorBoundary from '../../practice_react/src/Component/Error_Boundary/ErrorBoundary.jsx'
+import ErrorBoundary from './Component/Error_Boundary/ErrorBoundary.jsx'
 import MaxCount from './Component/Challenges/MaxCount.jsx'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -44,14 +44,23 @@ import ContextAPI_Method from './Component/child_to_parent/ContextAPI_Method.jsx
 import Pagination from './Component/Pagination/ClientSidePagination.jsx'
 import ClientSidePagination from './Component/Pagination/ClientSidePagination.jsx'
 import ServerSidePagination from './Component/Pagination/ServerSidePagination.jsx'
+import SyntheticEventExample from './Component/SyntheticEventExample.jsx'
+import PureComponent from './Component/PureComponent.jsx'
+import LiftingStateUp from './Component/LiftingStateUp.jsx'
+import CounterWithReducer from './Component/CounterWithReducer.jsx'
 
-
+import {useDispatch,useSelector}from 'react-redux'
+import { Decrement, Increment } from './Component/Redux/action.js'
 
 function App() {
   const [count, setCount] = useState(0)
 
   // we use custom hooks
-   const [name,setName]=useLocalStorageCustom('username','')
+  const users= useFetch('https://jsonplaceholder.typicode.com/todos/')
+
+  const value = useSelector((state) => state.count); // get count from state
+  console.log(value)
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -63,13 +72,18 @@ function App() {
       {/* <Effect/> */}
 
     {/* use Ref */}
-    {/* <Ref /> */}
+    <Ref />
 
     {/* useMemo */}
+
     {/* <Memo /> */}
 
     {/* use callback */}
     {/* <Callback /> */}
+
+
+    {/* useReducer */}
+    {/* <CounterWithReducer/> */}
 
     {/* use context */}
    {/* <Profile_context/>
@@ -77,9 +91,22 @@ function App() {
 
    {/* usecustomehooks */}
 
+     {/* <ul>
+                {users.map(user => (
+                    <li key={user.userId}>{user.id}-{user.title} </li>
+                ))}
+            </ul> */}
+   
+
   {/* <input type='text' placeholder='enter name' value={name} onChange={(e)=>setName(e.target.value)}/>
   <h2>hello,{name}</h2> */}
 
+   
+     {/*  LiftingStateUp */}
+     {/* <LiftingStateUp/> */}
+     
+     
+     
 
   {/* post api using fetch and axios */}
   {/* <PostApi/> */}
@@ -117,6 +144,7 @@ function App() {
 
     </Routes> */}
 
+
     {/* prepouplatedata */}
     {/* <Prepopulate/> */}
   
@@ -133,6 +161,7 @@ function App() {
     
     {/* <Searching/> */}
 
+
     {/* <Debouncing/> */}
 
     {/* <Throttling/> */}
@@ -144,8 +173,23 @@ function App() {
     {/* <ContextAPI_Method/> */}
 
 
+    {/* always prefer serverside pagination */}
     {/* <ClientSidePagination/> */}
-    <ServerSidePagination/>
+    {/* <ServerSidePagination/> */}
+
+    {/* synthentic evnet */}
+    {/* <SyntheticEventExample/> */}
+
+
+    {/* purecomponnet */}
+    {/* <PureComponent/> */}
+
+    {/* redux */}
+
+  
+    <h2>Counter: {value}</h2>
+    <button onClick={()=>dispatch(Increment())}>inc</button>
+    <button onClick={()=>dispatch(Decrement())}>dec</button>
 
    
       

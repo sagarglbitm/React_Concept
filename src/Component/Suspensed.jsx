@@ -4,6 +4,7 @@ import React, { Suspense } from 'react';
 const LazyComponent = React.lazy(() => import('./LazyComponent'));
 
 function Suspensed() {
+  
   return (
     <div>
       <h1>My Application</h1>
