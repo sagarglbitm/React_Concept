@@ -66,6 +66,7 @@ function Searching() {
             </tr>
           </thead>
           <tbody>
+            
             {filteredData.map((item, index) => (
               <tr key={item.serialNo || index}>
                 <td>{index + 1}</td>

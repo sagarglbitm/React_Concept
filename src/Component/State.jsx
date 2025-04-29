@@ -21,6 +21,10 @@ function State() {
 
   }
 
+
+
+
+
   const changeDetails=(e)=>{
     e.preventDefault()
 
@@ -50,6 +54,16 @@ function State() {
 
       <h1>it is {car.brand}</h1>
       <h2>it is {car.color} {car.model} from {car.year}</h2>
+       
+
+      {/* //   // ❌ Avoid
+// <button onClick={() => doSomething()}>
+
+// // ✅ Better
+// const handleClick = () => doSomething();
+// <button onClick={handleClick} /> */}
+
+
 
       <button onClick={changeDetails}>pink</button>
     </div>

@@ -51,6 +51,8 @@ import CounterWithReducer from './Component/CounterWithReducer.jsx'
 
 import {useDispatch,useSelector}from 'react-redux'
 import { Decrement, Increment } from './Component/Redux/action.js'
+import { Update } from './Component/Update.jsx'
+import LayoutEffect from './Component/LayoutEffect.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -72,7 +74,7 @@ function App() {
       {/* <Effect/> */}
 
     {/* use Ref */}
-    <Ref />
+    {/* <Ref /> */}
 
     {/* useMemo */}
 
@@ -80,6 +82,10 @@ function App() {
 
     {/* use callback */}
     {/* <Callback /> */}
+
+
+    {/* uselayouteffect */}
+    {/* <LayoutEffect/> */}
 
 
     {/* useReducer */}
@@ -91,11 +97,11 @@ function App() {
 
    {/* usecustomehooks */}
 
-     {/* <ul>
+     <ul>
                 {users.map(user => (
                     <li key={user.userId}>{user.id}-{user.title} </li>
                 ))}
-            </ul> */}
+            </ul>
    
 
   {/* <input type='text' placeholder='enter name' value={name} onChange={(e)=>setName(e.target.value)}/>
@@ -113,6 +119,10 @@ function App() {
 
   {/* getapi by using fetch and axios */}
   {/* <GetApi/> */}
+
+  {/* updaate by using fetch and axios */}
+  
+ {/* <Update/> */}
 
   {/* <Suspensed/> */}
 
@@ -187,14 +197,15 @@ function App() {
     {/* redux */}
 
   
-    <h2>Counter: {value}</h2>
+    {/* <h2>Counter: {value}</h2>
     <button onClick={()=>dispatch(Increment())}>inc</button>
     <button onClick={()=>dispatch(Decrement())}>dec</button>
 
-   
+    */}
       
     </>
   )
 }
 
 export default App
+
